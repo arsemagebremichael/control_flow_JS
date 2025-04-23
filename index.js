@@ -148,24 +148,16 @@ console.log(''); //To give me a space between my logs
 //Retake test until score is 50 and increase 10 on each attempt
 function scoreImprovement(score) {
    let retakeAttempt = 1;
-
    if (score >= 50) {
       console.log(`With a score of ${score}, you don't need to retake the test.`);
    }
-
    else {
       console.log(`Your score is ${score} before any attempts.`);
-
       do {
          score = score + 10;
          console.log(`Your score is ${score} on attempt ${retakeAttempt}.`);
          retakeAttempt += 1;
       } while (score < 50);
-
    }
-
-
 }
-
-
-scoreImprovement(30);
+scoreImprovement(0);
