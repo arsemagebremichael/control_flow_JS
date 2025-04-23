@@ -141,7 +141,7 @@ function registarationQueue(queueOfNames) {
    console.log({ queueOfNames });
 }
 registarationQueue(['Arsema A. Gebremichael', 'Semhal Estifanos', 'Pheobe Gloria', 'Queen Carine']);
-console.log('');
+console.log(''); //To give me a space between my logs
 
 
 
@@ -155,7 +155,7 @@ function scoreImprovement(score) {
 
    else {
       console.log(`Your score is ${score} before any attempts.`);
-      
+
       do {
          score = score + 10;
          console.log(`Your score is ${score} on attempt ${retakeAttempt}.`);
@@ -168,4 +168,4 @@ function scoreImprovement(score) {
 }
 
 
-scoreImprovement(50);
+scoreImprovement(30);
