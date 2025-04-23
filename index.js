@@ -1,7 +1,7 @@
 
 
 //Login attempts and Locking it after the 3rd try
-function failedLogin(attempts){
+function loginAttempts(attempts){
  while(attempts<=3 && attempts>0){
     console.log('You can try again.');
     attempts +=1;
@@ -11,18 +11,18 @@ function failedLogin(attempts){
     break;
  }
 }
-failedLogin(3)
+loginAttempts(5)
 console.log(''); //To give me a space between my logs
 
 
 
 //Logging the votes in our voting pool
-const votingPool = (votesArray) => {
+const votingPool = (votes) => {
    let vote = 0;
-   let voteLength = votesArray.length;
+   let voteLength = votes.length;
    do{
       
-      console.log(`Feature vote: ${votesArray[vote]}`)
+      console.log(`Recorded vote: ${votes[vote]}`)
       vote +=1;
       
     }while(vote < voteLength)
@@ -34,8 +34,8 @@ console.log(''); //To give me a space between my logs
 
 
 //Corresponding Days of the week with numbers
-const daysOfTheWeek = (daysOfTheWeek) => {
-   daysOfTheWeek.map(day => {
+const daysOfTheWeek = (daysInNumber) => {
+   daysInNumber.map(day => {
       switch(day){
          case 1:
             console.log(`${day} corresponds Monday.`);
@@ -69,10 +69,10 @@ console.log(''); //To give me a space between my logs
 
 
 
-//Strong password checker
+//Password Strength check
 function passwordStrengthCheck(passwords){
    let i;
-   passwords.map(password=> {
+   passwords.map(password=>{
       if (password.length >= 8) {
          console.log(`The password ${password} is a strong password.`);
       }
@@ -81,15 +81,15 @@ function passwordStrengthCheck(passwords){
       }
    })
 }
-let a = ['123jnsdbfrf', '2jbeied29143d', 'sdjfsd', '356']
+let a = ['password123', '@whata password', 'password', '1234']
 passwordStrengthCheck(a)
 console.log(''); //To give me a space between my logs
 
 
 
 //Language Change
-const multiligual = (language)=>{
-   switch(language){
+const multilingualGreeting = (languageCode)=>{
+   switch(languageCode){
       case 'en':
          console.log('Hello');
          break;
@@ -106,21 +106,21 @@ const multiligual = (language)=>{
          console.log('Buongiorno');
          break;
       default:
-         console.log('Selam')
+         console.log(`Gretting not available for "${languageCode}" language code`)
    }
 }
-multiligual('ru')
+multilingualGreeting('ru')
 console.log(''); //To give me a space between my logs
 
 
 
 //Weather dashboard
 function weatherAlert(weatherDashboard){
-   weatherDashboard.map(weather=>{
-      if (weather > 30){
+   weatherDashboard.map(temprature=>{
+      if (temprature > 30){
          console.log('High heat alert!');
       }
-      else if (weather < 15){
+      else if (temprature < 15){
          console.log('Cold alert!');}
       else {
          console.log('Normal conditions');
@@ -133,7 +133,7 @@ console.log(''); //To give me a space between my logs
 
 
 //Registering in queue
-function registaration(queueOfNames){
+function registarationQueue(queueOfNames){
    let lengthOfQueue = queueOfNames.length;
    while(lengthOfQueue>0){
       console.log(`Name: ${queueOfNames.shift()}`);
@@ -141,7 +141,7 @@ function registaration(queueOfNames){
    }  
    console.log({queueOfNames});
 }
-registaration(['Arsema A. Gebremichael', 'Semhal Estifanos', 'Pheobe Gloria', 'Queen Carine']);
+registarationQueue(['Arsema A. Gebremichael', 'Semhal Estifanos', 'Pheobe Gloria', 'Queen Carine']);
 console.log('');
 
 
